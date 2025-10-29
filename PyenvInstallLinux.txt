@@ -1,0 +1,26 @@
+Instalações
+
+Python usando pyenv no linux
+
+sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev tk-dev libffi-dev liblzma-dev python3-dev python3-pip git
+
+curl https://pyenv.run | bash
+
+adicionar em ~/.bashrc
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init --path)"\nfi' >> ~/.bashrc
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv virtualenv-init -)"\nfi' >> ~/.bashrc
+
+executar os comandos:
+
+source ~/.bashrc
+pyenv --version
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
+
+comandos importantes:
+pyenv install --list
+pyenv global 3.13.9
+pyenv local 3.13.9
